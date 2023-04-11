@@ -117,7 +117,6 @@ def find_date(text,begin,end,bill,amount):
         check_date=datetime.strptime('01/12/2020','%d/%m/%Y')
         #The format of the bill changes at the end of the 2020.
         if dt_d<check_date:
-            print(dts)
             begin.append(dts[1])
             end.append(dts[2])
         else:
