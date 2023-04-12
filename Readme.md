@@ -1,5 +1,5 @@
 # Electric Bill Data Extraction and Analysis
-This Python script is designed to help users calculate the sums of consumption [kWh] and amount [Euro] provided by electric bills in PDF form from the public power company® in Greece. It automates the process of extracting data from PDFs and processing it to analyze the data from the electric bills, the consumption and the amount to pay.
+This Python script is designed to help users calculate the sums of consumption [kWh] and amount [Euro] provided by electric bills in PDF format from the public power company® in Greece. It automates the process of extracting data from PDFs and then the data, the consumption and the amount to pay, are analyzed on a year and quarter basis.
 
 ## Getting Started
 To get started with this script, the user will need to have Python 3 installed on your system. Python is downloaded from the official website: https://www.python.org/downloads/.
