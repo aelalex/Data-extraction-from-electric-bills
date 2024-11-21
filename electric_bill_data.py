@@ -146,7 +146,7 @@ def graphs_per_quarter(dataframe):
     """Graphs of price and consumption per quarter  """
 
     # group data by year and quarter
-    grouped = dataframe.groupby(['year','quarter']).sum()
+    grouped = dataframe.groupby(['year','quarter'])[['Consumption', 'Bill']].sum()
 
     # reshape data into a pivot table
     pivot = grouped.pivot_table(index='quarter', columns='year', values='Bill', aggfunc=np.sum)
@@ -178,7 +178,7 @@ def graphs_per_year(dataframe):
     """Graphs of price and consumption per year"""
 
     #Results for each a year
-    df_year=dataframe.groupby(pd.to_datetime(dataframe['Date_bill']).dt.year).sum()
+    df_year=dataframe.groupby(pd.to_datetime(dataframe['Date_bill']).dt.year)[['Consumption', 'Bill']].sum()
 
     # Create a figure with two subplots side by side
     fig, axs = plt.subplots(1, 2, figsize=(15, 6))
